@@ -17,7 +17,7 @@ $_SESSION["name"] = $_POST["name"];
 $_SESSION["email"] = $_POST["email"];
 $_SESSION["password"] = $_POST["password"];
 $_SESSION["Confirmassword"] = $_POST["Confirmassword"];
-$_SESSION["radio"] = $_POST["gender"];
+$_SESSION["gender"] = $_POST["gender"];
 $_SESSION["bday"] = $_POST["bday"];
 
 
