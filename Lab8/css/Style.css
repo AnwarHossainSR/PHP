@@ -1,0 +1,162 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color:#EEE8ae;
+}
+#header{
+	background-color: #1abc9c;
+	padding: 15px ;
+	border-bottom: 5px solid #6b710e;
+}
+#wrapper{
+	width:1200px;
+	margin: 15px auto;
+	background-color: white;
+}
+#header h2{
+	color: #fffff1;
+	font-family: Georgia;
+}
+#header h3{
+	color: #fffff1;
+	font-family: Georgia;
+    text-align: right;
+}
+#header a{
+	text-decoration: none;
+	color: #fffff1;
+	display: block;
+}
+#header a:hover{
+	color: red;
+	font-family: arial;
+}
+#header p{
+	color: #788420;
+}
+#nav{
+	background-color: white;
+	height: 38px ;
+	border-bottom: 5px solid #6b710e;
+
+}
+#nav ul{
+	background-color: white;
+	list-style-type: none;
+}
+#nav ul li{
+	float: right;
+	border-right:1px solid #6b710e;
+}
+#nav ul li:last-child{
+	border: none;
+}
+#nav ul li a{
+	text-decoration: none;
+	color: teal;
+	display: block;
+	padding: 10px;
+	
+}
+#nav ul li a:hover{
+	color: red;
+	font-family: arial;
+}
+#nav ul li{
+	position: relative;
+}
+#nav ul li ul{
+	position: absolute;
+	left: -99999px;
+	background-color: white;
+}
+#nav ul li:hover ul{
+	left: 0;
+} 
+#nav ul li ul li{
+	float: none;
+	border-right: none;
+	border-bottom: 1px solid #6b710e;
+}
+
+#slider img{
+	width: 1200px;
+	border-bottom: 5px solid #6b710e;
+    vertical-align: middle;
+}
+#content_wrapper{
+	background-color: #fff;
+	border-top: 1px solid #6b710e;
+	padding: 10px;
+	overflow: hidden;
+}
+#content{
+	width: 620px;
+	margin-right: 20px;
+	float: left;
+}
+#content h2{ 
+	color: #6b710e;
+	font-family:arial ;
+}
+#sidebar{
+	width: 300px;
+	float: left;
+}
+#sidebar ul{
+	list-style-type: circle;
+}
+#sidebar ul li a{
+	text-decoration: none;
+	color:  #6b710e;
+	padding: 3px;
+	display: block;
+} 
+#sidebar h2{
+	color: #6b710e;
+}
+
+/*footer*/
+.footer_container{
+	background-color: black;
+	text-align: center;
+	padding: 10px;
+
+}
+.footer_container a{
+	color: #0fa99b;
+	text-decoration: none;
+	margin: 20px;
+}
+
+.footer_container p{
+	color: gray;
+	margin-top: 20px;
+}
+
+.footer_container a:hover{
+	text-decoration: none;
+	color:#e81c0f;
+
+}
+
+/*    ///////  Registration ////////  */
+
+
+.error {color: #FF0000;}
+.color {color: #2c6ced;}
+
+#s1{
+	
+	height:100px;
+	width:500px; 
+	margin-left: 300px;
+}
+#p1{
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+
