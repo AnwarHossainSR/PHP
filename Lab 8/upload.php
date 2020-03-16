@@ -24,8 +24,8 @@ if(isset($_POST["submit"])) {
 }
 // Check if file already exists
 if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
+    echo "Profile photo changed successfylly.";
+    $uploadOk = 1;
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
@@ -33,7 +33,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     $uploadOk = 0;
 }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
@@ -68,15 +68,54 @@ if ($uploadOk == 0) {
 					//VALUES ('".$_POST["pname"]."', '".$_POST["description"]."', '".$_POST["quantity"]."')";
 
 					if ($conn->query($sql) === TRUE) {
-						echo "New record created successfully";
+						echo "";
 					} else {
 						echo "Error: " . $sql . "<br>" . $conn->error;
 					}
 
 					$conn->close();
-			$_SESSION["uname"]=$_POST["uname"];
-			header("Location:profile.php");	
-		
-		
-		
+			
 	?>
+
+
+
+	<?php 
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "xdb";
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
+
+	$sql = "SELECT picture FROM users WHERE username='".$_SESSION["uname"]."'";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+		// output data of each row
+		?>
+		<table>
+			<tr>
+				<th>Profile Picture</th>
+			</tr>
+		<?php
+		while($row = $result->fetch_assoc()) {
+			echo "<tr>";			
+			?>
+			<td><img src="<?php echo $row["picture"]; ?>" height="150px"/></td>
+			<?php
+			echo "</tr>";
+		}
+		echo "</table>";
+
+	} else {
+		echo "0 results";
+	}
+
+	$conn->close();
+
+			
+?>

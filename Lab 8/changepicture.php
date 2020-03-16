@@ -30,21 +30,25 @@
 	<div class="content_area">
 		<div class="content_left">
 			<h3>Account</h3>
+			<hr class="hr">
 			<ul>
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profile.php">View Profile</a></li>
 				<li><a href="editprofile.php">Edit Profile</a></li>
 				<li><a href="changepicture.php">Change Profile Picture</a></li>
 				<li><a href="changepassword.php">Change Password</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 		<div class="content_right">
+			<br><br><br><br>
+			<div class="vl"></div>
 			<div class="content_right_l">
 				<h3>Profile Picture</h3>
 				
 				<form action="upload.php" method="post" enctype="multipart/form-data">
-					Select image to upload:
-					<input type="file" name="fileToUpload" id="fileToUpload">
+					Select image to upload:<br><br>
+					<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 					<input type="submit" value="Upload Image" name="submit">
 				</form>
 				

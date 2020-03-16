@@ -30,15 +30,19 @@
 	<div class="content_area">
 		<div class="content_left">
 			<h3>Account</h3>
+			<hr class="hr">
 			<ul>
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profile.php">View Profile</a></li>
 				<li><a href="editprofile.php">Edit Profile</a></li>
 				<li><a href="changepicture.php">Change Profile Picture</a></li>
 				<li><a href="changepassword.php">Change Password</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 		<div class="content_right">
+			<br><br><br><br>
+			<div class="vl"></div>
 			<div class="content_right_l">
 				<h3>Profile</h3>
 				<?php
@@ -53,7 +57,7 @@
 						die("Connection failed: " . $conn->connect_error);
 					}
 
-					$sql = "SELECT id, name, username, email,password,picture FROM users WHERE username='".$_SESSION["uname"]."'";
+					$sql = "SELECT id, name, username, email,password,gender,date,picture FROM users WHERE username='".$_SESSION["uname"]."'";
 					$result = $conn->query($sql);
 
 					if ($result->num_rows > 0) {
@@ -78,6 +82,16 @@
 							echo "<tr>";
 							echo "<td>Username :</td>";
 							echo "<td>".$row["username"]."</td>";
+							echo "</tr>";
+
+							echo "<tr>";
+							echo "<td>Gender :</td>";
+							echo "<td>".$row["gender"]."</td>";
+							echo "</tr>";
+
+							echo "<tr>";
+							echo "<td>Reg Date :</td>";
+							echo "<td>".$row["date"]."</td>";
 							echo "</tr>";
 
 							echo "<tr>";

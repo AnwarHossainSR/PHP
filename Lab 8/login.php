@@ -35,7 +35,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>XCOMPANY</title>
-		<link rel="stylesheet" href="regstyle.css">
+		<link rel="stylesheet" href="loginstyle.css">
 </head>
 <body>
 	<div class="header_area">
@@ -70,7 +70,7 @@
 				
 
 				<tr>
-					<td align="center" colspan="2"><input type="submit" value="Submit" /></td>
+					<td align="center" colspan="2"><input type="submit" value="Login" /></td>
 					
 				</tr>
 				

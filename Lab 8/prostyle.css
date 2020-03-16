@@ -13,7 +13,7 @@ body{
 		.logoarea{
 			width:35%;
 			float:left;
-			background-color:#44A97C;
+			background-color:#0fa99b;
 		}
 		.logoarea h1{
 			padding-left:30px;
@@ -21,7 +21,7 @@ body{
 		.menu_area{
 			width:65%;
 			float:left;
-			background-color:#44A97C;
+			background-color:#0fa99b;
 		}
 		.menu_area ul{
 			list-style:none;
@@ -41,6 +41,15 @@ body{
 			width:100%;
 			overflow:hidden;
 		}
+		.content_left a{
+			font-weight: bold;
+			color:#0fa99b;
+		}
+		.content_left ul li a:hover{
+			text-decoration: none;
+			color:#e81c0f;
+
+		}  
 		.content_left{
 			width:35%;
 			float:left;
@@ -49,13 +58,8 @@ body{
 		.content_right{
 			width:65%;
 			float:left;
-		}
-		.footer_area{
-			width:100%;
-			overflow:hidden;
-		}
-		.footer_area h3{
-			text-align:center;
+			margin-top:-120px;
+			margin-left:600px;
 		}
 /*footer*/
 .footer_container{
@@ -73,4 +77,23 @@ body{
 .footer_container p{
 	color: gray;
 	margin-top: 20px;
+}
+
+.footer_container a:hover{
+	text-decoration: none;
+	color:#e81c0f;
+
+}
+.hr{
+	margin-right: 150px;
+}
+.vl {
+  border-left: 1px solid ;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  margin-top:150px;
+  margin-left: -280px;
+  top: 0;
+
 }

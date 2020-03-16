@@ -13,7 +13,7 @@ body{
 		.logoarea{
 			width:35%;
 			float:left;
-			background-color:#44A97C;
+			background-color:#0fa99b;
 		}
 		.logoarea h1{
 			padding-left:30px;
@@ -21,7 +21,7 @@ body{
 		.menu_area{
 			width:65%;
 			float:left;
-			background-color:#44A97C;
+			background-color:#0fa99b;
 		}
 		.menu_area ul{
 			list-style:none;
@@ -46,6 +46,15 @@ body{
 			float:left;
 		}
 		
+		.content_left a{
+			font-weight: bold;
+			color:#0fa99b;
+		}
+		.content_left ul li a:hover{
+			text-decoration: none;
+			color:#e81c0f;
+
+		}  
 		.content_right{
 			width:65%;
 			float:left;
@@ -79,3 +88,17 @@ body{
 			width:50%;
 			float:left;
 		}
+
+		.hr{
+	margin-right: 150px;
+}
+.vl {
+  border-left: 1px solid ;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  margin-top:150px;
+  margin-left: -280px;
+  top: 0;
+
+}

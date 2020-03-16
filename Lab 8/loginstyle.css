@@ -40,15 +40,14 @@ body{
 			font-weight: bold;
         } 
 		.content_area{
-			padding-top: 80px;
+			padding-top: 100px;
 			width:100%;
 			overflow:hidden;
 		}
 		.content_area2{
 			height:500px;
 			width:100%;
-			overflow:hidden;
-			margin-left: 450px;
+			overflow:hidden; 
 
 		}
 /*footer*/
@@ -59,10 +58,10 @@ body{
 	margin-right: 40px;
 
 }
-
 .footer_container p{
 	color: gray;
 	margin-top: 20px;
+	margin-right: 10px;
 }
 
 .x{

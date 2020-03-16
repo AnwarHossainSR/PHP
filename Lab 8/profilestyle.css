@@ -3,17 +3,17 @@ body{
 			padding:0px 50px;
 		}
 		a{
-			text-decoration:none;
+			color: #0fa99b;
+	        text-decoration: none;
 		}
 		.header_area{
 			width:100%;
-			
+			background-color: #0fa99b;
 			
 		}
 		.logoarea{
 			width:35%;
 			float:left;
-			background-color:#44A97C;
 		}
 		.logoarea h1{
 			padding-left:30px;
@@ -21,7 +21,7 @@ body{
 		.menu_area{
 			width:65%;
 			float:left;
-			background-color:#44A97C;
+			
 		}
 		.menu_area ul{
 			list-style:none;
@@ -34,7 +34,7 @@ body{
 		}
 		.menu_area ul li a{
 			
-			color:white;
+			text-decoration: underline;
 		}
 		.content_area{
 			height:500px;
@@ -44,7 +44,20 @@ body{
 		.content_left{
 			width:35%;
 			float:left;
+			margin-top: 20px;
 		}
+		.content_left h3{
+			color: #0fa99b;
+		}
+        .content_left a{
+			font-weight: bold;
+			color:#0fa99b;
+		}
+		.content_left ul li a:hover{
+			text-decoration: none;
+			color:#e81c0f;
+
+		}   
 		
 		.content_right{
 			width:65%;
@@ -70,8 +83,21 @@ body{
 	color: gray;
 	margin-top: 20px;
 }
-.footer_container a{
-	color: #0fa99b;
-	text-decoration: none;
-	margin: 20px;
+.hr{
+	margin-right: 150px;
 }
+.vl {
+  border-left: 1px solid ;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  margin-top:150px;
+  margin-left: -280px;
+  top: 0;
+
+}
+.h3{
+	margin-left: 80px;
+	
+}
+

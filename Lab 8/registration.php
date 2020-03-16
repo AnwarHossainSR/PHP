@@ -25,25 +25,36 @@
 			<table>
 				<tr>
 					<td><b>Name :</b></td>
-					<td><input type="text" name="name"/></td>
+					<td><input type="text" name="name"/><br><br></td>
 				
 				</tr>
 				<tr>
 					<td><b>Email :</b></td>
-					<td><input type="email" name="email"/></td>
+					<td><input type="email" name="email"/><br><br></td>
 				
 				</tr>
 				<tr>
 					<td><b>UserNmae :</b></td>
-					<td><input type="text" name="username"/></td>
+					<td><input type="text" name="username"/><br><br></td>
 				
 				</tr>
 				<tr>
 					<td><b>Password :</b></td>
-					<td><input type="password" name="pass"/></td>
+					<td><input type="password" name="pass"/><br><br></td>
 				
 				</tr>
+				<tr>
+					<td><b>Gender :</b></td>
+					<td><input type="radio" name="gender" value="male"> Male
+					<input type="radio" name="gender" value="female"> Female
+					<input type="radio" name="gender" value="other"> Other
+					 <br></td>
+				</tr>
+				<tr>
+					<td><b>Date :</b></td>
+					<td><input type="date" name="date"/><br><br></td>
 				
+				</tr>
 				<tr>
 					<td align="center" colspan="2"><input type="submit" value="Submit" /></td>
 				
@@ -57,6 +68,7 @@
 		</form>
 	</div>
 </center>
+<br><br><br><br>
 	<footer class="footer_container">
 				<p>Copyright &copy; Mahedi Hasan, 2020</p>
 	</footer>
@@ -74,11 +86,11 @@
 	}
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
-		$sql = "INSERT INTO users (name, email,username,password)
-		VALUES ('".$_POST["name"]."','".$_POST["email"]."','".$_POST["username"]."','".$_POST["pass"]."')";
+		$sql = "INSERT INTO users (name, email,username,password,gender,date)
+		VALUES ('".$_POST["name"]."','".$_POST["email"]."','".$_POST["username"]."','".$_POST["pass"]."','".$_POST["gender"]."','".$_POST["date"]."')";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
+			header("location: index.php");
 		} 
 		else {
 			echo "Error: " . $sql . "<br>" . $conn->error;

@@ -30,12 +30,14 @@
 	<div class="content_area">
 		<div class="content_left">
 			<h3>Account</h3>
+			<hr class="hr">
 			<ul>
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profile.php">View Profile</a></li>
 				<li><a href="editprofile.php">Edit Profile</a></li>
 				<li><a href="changepicture.php">Change Profile Picture</a></li>
 				<li><a href="changepassword.php">Change Password</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 		<div class="content_right">
@@ -52,7 +54,7 @@
 					die("Connection failed: " . $conn->connect_error);
 				}
 
-				$sql = "SELECT id, name, username, email,password FROM users WHERE username='".$_SESSION["uname"]."'";
+				$sql = "SELECT id, name, username, email, gender FROM users WHERE username='".$_SESSION["uname"]."'";
 				$result = $conn->query($sql);
 
 				if ($result->num_rows > 0) {
@@ -63,6 +65,7 @@
 						$ename=$row["name"];
 						$eemail=$row["email"];
 						$uuname=$row["username"];
+						$ugender=$row["gender"];
 					}
 					
 				} else {
@@ -73,30 +76,33 @@
 				
 				
 			 ?>
+			 <div class="vl"></div>
 		<form method="post">
 		<table>
 			<tr>
-				<td><b>Name :</b></td>
-				<td><input type="text" name="name" value="<?php echo $ename; ?>"/></td>
+				<td><b>Name :<br><br></b></td>
+				<td><input type="text" name="name" value="<?php echo $ename; ?>"/><br><br></td>
 				
 			</tr>
 			<tr>
-				<td><b>Email :</b></td>
-				<td><input type="text" name="email" value="<?php echo $eemail; ?>"/></td>
+				<td><b>Email :<br><br></b></td>
+				<td><input type="text" name="email" value="<?php echo $eemail; ?>"/><br><br></td>
 				
 			</tr>
 			
 			<tr>
-				<td><b>Username :</b></td>
-				<td><input type="text" name="uname" value="<?php echo $uuname; ?>"/></td>
+				<td><b>Username :<br><br></b></td>
+				<td><input type="text" name="uname" value="<?php echo $uuname; ?>"/><br><br></td>
 				
 			</tr>
-			
-			
-			
-			
 			<tr>
-				<td align="center" colspan="2"><input type="submit" value="Submit" /></td>
+			<td><b>Gender :<br><br></b></td>
+			<td><input type="text" name="gender" value="<?php echo $ugender; ?>"/><br><br></td>
+			<br><br></td>
+			</tr>
+
+			<tr>
+				<td align="center" colspan="2"><input type="submit" value="Update" /></td>
 				
 			</tr>
 			
@@ -106,7 +112,7 @@
 		
 	</form>
 			
-		</div>
+	    </div>
 	</div>
 	<footer class="footer_container">
 				<p>Copyright &copy; Mahedi Hasan, 2020</p>
@@ -124,10 +130,7 @@
 					if ($conn->connect_error) {
 						die("Connection failed: " . $conn->connect_error);
 					}
-					$sql="UPDATE users SET name='".$_POST["name"]."',email='".$_POST["email"]."',username= '".$_POST["uname"]."' WHERE id='".$eid."'";
-					//$sql = "INSERT INTO products (product_name, description, quantity)
-					//VALUES ('".$_POST["pname"]."', '".$_POST["description"]."', '".$_POST["quantity"]."')";
-
+					$sql="UPDATE users SET name='".$_POST["name"]."',email='".$_POST["email"]."',username= '".$_POST["uname"]."',gender='".$_POST["gender"]."' WHERE id='".$eid."'";
 					if ($conn->query($sql) === TRUE) {
 						echo "New record created successfully";
 					} else {

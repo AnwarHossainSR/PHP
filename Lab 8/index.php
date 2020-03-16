@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="regstyle.css">
 </head>
 <body>
-	<div class="header_area">
+	<div class="header_area" >
 		<div class="logoarea">
 			<h1><span class="x">X</span>Company</h1>
 		</div>
@@ -19,6 +19,7 @@
 		</div>
 	</div>
 	<div class="content_area2">
+		<br><br><br><br><br><br><br><br><br><br><br>
 		<h1>Welcome to Our Company</h1>
 	</div>
 		<footer class="footer_container">
